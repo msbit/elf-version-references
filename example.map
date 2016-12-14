@@ -3,18 +3,19 @@ EXAMPLE_1.1 {
     example;
   local:
     example_10;
+    example_11;
 };
 
 EXAMPLE_1.2 {
   global:
     example;
   local:
-    example_11;
+    example_12;
 } EXAMPLE_1.1;
 
 EXAMPLE_2.0 {
   global:
     example;
   local:
-    example_12;
+    example_20;
 } EXAMPLE_1.2;

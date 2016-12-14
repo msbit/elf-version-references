@@ -1,0 +1,20 @@
+EXAMPLE_1.1 {
+  global:
+    example;
+  local:
+    example_10;
+};
+
+EXAMPLE_1.2 {
+  global:
+    example;
+  local:
+    example_11;
+} EXAMPLE_1.1;
+
+EXAMPLE_2.0 {
+  global:
+    example;
+  local:
+    example_12;
+} EXAMPLE_1.2;

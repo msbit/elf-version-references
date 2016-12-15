@@ -75,25 +75,25 @@ $ objdump -T main | grep -i example
 the base case, using `__asm__(".symver example,example@")`:
 
 ```
-$ objdump -p main | grep -i example
+$ objdump -p main_base | grep -i example
   NEEDED               libexample.so
 ```
 
 ```
-$ objdump -T main | grep -i example
+$ objdump -T main_base | grep -i example
 0000000000000000      DF *UND*	0000000000000000              example
 ```
 
 or the specified case, using `__asm__(".symver example,example@EXAMPLE_1.1")`:
 
 ```
-$ objdump -p main | grep -i example
+$ objdump -p main_11 | grep -i example
   NEEDED               libexample.so
   required from libexample.so:
     0x0541e631 0x00 03 EXAMPLE_1.1
 ```
 
 ```
-$ objdump -T main | grep -i example
+$ objdump -T main_11 | grep -i example
 0000000000000000      DF *UND*	0000000000000000  EXAMPLE_1.1 example
 ```
